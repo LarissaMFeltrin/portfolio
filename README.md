@@ -61,6 +61,10 @@ php artisan serve
 
 Site em `http://127.0.0.1:8000`, painel em `http://127.0.0.1:8000/admin`.
 
+O `composer install` publica o JavaScript do Livewire em `public/vendor/livewire`.
+Sem isso, um nginx com regra de cache para `*.js` (como a padrão do aaPanel)
+procura o arquivo em disco, responde 404 e o painel não funciona.
+
 Testes: crie o banco `portfolio_test` e rode `php artisan test`.
 
 ## Estrutura
